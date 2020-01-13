@@ -4,9 +4,7 @@ class Show < ActiveRecord::Base
   belongs_to :network
   
   def actors_list
-    characters.map do |c|
-      "#{c.actor.first_name} #{c.actor.last_name}"
-  end 
-end
+    characters.map { |c| "#{c.actor.first_name} #{c.actor.last_name}" }
+  end
   
 end
